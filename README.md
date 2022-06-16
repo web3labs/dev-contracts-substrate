@@ -5,6 +5,7 @@
 To install all the packages required for a Substrate node, follow the instructions [here](https://docs.substrate.io/tutorials/v3/create-your-first-substrate-chain/#install-required-packages)
 
 To learn more about running a private network, check out [this tutorial](https://docs.substrate.io/tutorials/v3/private-network/)
+or just run `scripts/run-private-network.sh`
 
 ## Example Contracts
 
