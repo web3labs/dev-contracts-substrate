@@ -1,0 +1,145 @@
+{
+  "source": {
+    "hash": "0x35e26aeb897e58f3eb2cb4b0dcca42c28df7e00cde3335c4a353b1962ad1b2ad",
+    "language": "ink! 3.3.0",
+    "compiler": "rustc 1.63.0-nightly"
+  },
+  "contract": {
+    "name": "incrementer",
+    "version": "3.2.0",
+    "authors": [
+      "Parity Technologies <admin@parity.io>"
+    ]
+  },
+  "V3": {
+    "spec": {
+      "constructors": [
+        {
+          "args": [
+            {
+              "label": "init_value",
+              "type": {
+                "displayName": [
+                  "u32"
+                ],
+                "type": 0
+              }
+            }
+          ],
+          "docs": [
+            "Creates a new counter smart contract initialized with the given base value."
+          ],
+          "label": "new",
+          "payable": false,
+          "selector": "0x9bae9d5e"
+        },
+        {
+          "args": [],
+          "docs": [
+            "Creates a new counter smart contract initialized to `0`."
+          ],
+          "label": "default",
+          "payable": false,
+          "selector": "0xed4b9d1b"
+        }
+      ],
+      "docs": [],
+      "events": [],
+      "messages": [
+        {
+          "args": [],
+          "docs": [
+            " Increments the counter value which is stored in the contract's storage."
+          ],
+          "label": "inc",
+          "mutates": true,
+          "payable": false,
+          "returnType": null,
+          "selector": "0x1d32619f"
+        },
+        {
+          "args": [],
+          "docs": [
+            " Returns the counter value which is stored in this contract's storage."
+          ],
+          "label": "get",
+          "mutates": false,
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "u32"
+            ],
+            "type": 0
+          },
+          "selector": "0x2f865bd9"
+        },
+        {
+          "args": [
+            {
+              "label": "code_hash",
+              "type": {
+                "displayName": [],
+                "type": 1
+              }
+            }
+          ],
+          "docs": [
+            " Modifies the code which is used to execute calls to this contract address (`AccountId`).",
+            "",
+            " We use this to upgrade the contract logic. We don't do any authorization here, any caller",
+            " can execute this method. In a production contract you would do some authorization here."
+          ],
+          "label": "set_code",
+          "mutates": true,
+          "payable": false,
+          "returnType": null,
+          "selector": "0x694fb50f"
+        }
+      ]
+    },
+    "storage": {
+      "struct": {
+        "fields": [
+          {
+            "layout": {
+              "cell": {
+                "key": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "ty": 0
+              }
+            },
+            "name": "count"
+          }
+        ]
+      }
+    },
+    "types": [
+      {
+        "id": 0,
+        "type": {
+          "def": {
+            "primitive": "u32"
+          }
+        }
+      },
+      {
+        "id": 1,
+        "type": {
+          "def": {
+            "array": {
+              "len": 32,
+              "type": 2
+            }
+          }
+        }
+      },
+      {
+        "id": 2,
+        "type": {
+          "def": {
+            "primitive": "u8"
+          }
+        }
+      }
+    ]
+  }
+}
