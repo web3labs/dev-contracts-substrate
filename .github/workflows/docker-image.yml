@@ -1,4 +1,4 @@
-name: Build Contracts Node Template
+name: Build Contracts Node
 
 on:
   workflow_dispatch:
