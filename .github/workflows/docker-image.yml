@@ -26,7 +26,7 @@ jobs:
         echo "VERSION=${VERSION}" >> $GITHUB_ENV
     - name: Build the Docker image
       run: |
-       cd substrate-node-contracts
+       cd substrate-contracts-node
        docker build . --file Dockerfile --tag $IMAGE_NAME:$VERSION
  
     - name: Log in to registry

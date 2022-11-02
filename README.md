@@ -2,14 +2,12 @@
 
 ## Development Contracts Node
 
-To install all the packages required for a Substrate node, follow the instructions [here](https://docs.substrate.io/tutorials/v3/create-your-first-substrate-chain/#install-required-packages)
-
-To learn more about running a private network, check out [this tutorial](https://docs.substrate.io/tutorials/v3/private-network/)
-or just run `scripts/run-private-network.sh`
+We provide a patched [substrate-contracts-node](https://github.com/web3labs/dev-contracts-substrate/tree/main/substrate-contracts-node) to run your test network.
 
 ## Example Contracts
 
 Example ink! smart contracts are stored in the folder `example-contracts/`. To be able to build the contracts, you will need:
+
 * The WebAssembly binaryen package
 * The cargo-contract command line interface
 
