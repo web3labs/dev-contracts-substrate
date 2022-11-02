@@ -9,7 +9,6 @@ RUN cargo build --release
 FROM docker.io/library/ubuntu:20.04
 COPY --from=builder /substrate/target/release/substrate-contracts-node /usr/local/bin
 
-EXPOSE 9933:9933
 EXPOSE 9944:9944
 
 ENTRYPOINT [ "substrate-contracts-node" ]
