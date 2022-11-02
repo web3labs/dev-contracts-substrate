@@ -7,7 +7,7 @@ We provide a patched [substrate-contracts-node](https://github.com/web3labs/dev-
 ### Running
 
 ```
-❯ docker run --rm ghcr.io/web3labs/finality-contracts-node:latest
+❯ docker run -p 9944:9944 --rm ghcr.io/web3labs/finality-contracts-node:latest
 2022-11-02 15:06:27.928  INFO main sc_cli::runner: Substrate Contracts Node
 2022-11-02 15:06:27.928  INFO main sc_cli::runner: ✌️  version 0.21.0-unknown
 2022-11-02 15:06:27.928  INFO main sc_cli::runner: ❤️  by Parity Technologies <admin@parity.io>, 2021-2022
