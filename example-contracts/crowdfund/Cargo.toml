@@ -1,20 +1,22 @@
 [package]
-name = "incrementer"
-version = "4.0.0-beta"
-authors = ["Parity Technologies <admin@parity.io>"]
+name = "crowdfund"
+version = "0.1.0"
+authors = ["Frankie O'Malley <frozen.pomelo@gmail.com>"]
 edition = "2021"
-publish = false
 
 [dependencies]
 ink = { git="https://github.com/paritytech/ink", rev="c2c0a9ff2c8f161b183c0e3d99c6358c96afaee3", version = "4.0.0-alpha.3", default-features = false }
 
 scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
-scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
+scale-info = { version = "2", default-features = false, features = ["derive"], optional = true }
 
 [lib]
-name = "incrementer"
+name = "crowdfund"
 path = "lib.rs"
-crate-type = ["cdylib"]
+crate-type = [
+	# Used for normal contract Wasm blobs.
+	"cdylib",
+]
 
 [features]
 default = ["std"]

@@ -31,19 +31,6 @@ https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
 
 ## Example Contracts
 
-Example ink! smart contracts are stored in the folder `example-contracts/`. To be able to build the contracts, you will need:
+Example ink! smart contracts are stored in the folder `example-contracts/`. To build the contracts in such a way that they can be verified through the [Ink Verifier Service](https://github.com/web3labs/ink-verifier-server), check out the documentation for [generating verifiable packages](https://github.com/web3labs/ink-verifier-image/blob/main/README.md#reproducible-build).
 
-* The WebAssembly binaryen package
-* The cargo-contract command line interface
-
-```bash
-# install binaryen
-sudo apt install binaryen
-
-# install cargo-contract
-cargo install dylint-link
-cargo install cargo-contract --force
-```
-
-After installation is complete, build the contract inside their respective folder with the command
-`cargo +nightly contract build`
+If you want to skip the step of generating the package, you can also find generated packages in the folder `verifiable-packages/`. We have the contracts built for both Ink! 4.0.0-beta (for uploading to Rococo-Contracts parachain) and also Ink! 4.0.0-alpha.3 (for uploading to our [local testnet](#development-contracts-node))
