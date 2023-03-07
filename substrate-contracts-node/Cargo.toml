@@ -5,8 +5,5 @@ members = [
     'runtime',
 ]
 
-[patch."https://github.com/paritytech/substrate"]
-sc-consensus-manual-seal = { path = "client/consensus/manual-seal" }
-
 [profile.release]
 panic = 'unwind'
